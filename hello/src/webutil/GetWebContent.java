@@ -35,6 +35,8 @@ public class GetWebContent {
 	//this is real method to find the content from net
 	public String findIt(){
 		String ret = null;
+		boolean start= false;
+		boolean end = false;
 		try {
 			URL target = new URL("http://stock.quote.stockstar.com/dividend_"+code+".shtml");
 			BufferedReader in = new BufferedReader(
@@ -42,9 +44,16 @@ public class GetWebContent {
 			
 			String inputLine;
 			while((inputLine = in.readLine()) != null){
-				if(inputLine.contains("派现金额占募资金额的")){
+				if(inputLine.contains("<!-- 分红送配 begin -->")){
+					start = true;
+					ret = getDivident(inputLine);
+				}
+				if(inputLine.contains("<!-- 分红送配 end -->")){
+					start = false;
+					end = true;
+				}
+				if(start && !end){
 					System.out.println(inputLine);
-					ret = getRank(inputLine);
 				}
 			}
 			
@@ -61,6 +70,11 @@ public class GetWebContent {
 		
 		setResult(  ret);
 		return getResult();
+	}
+
+	private String getDivident(String inputLine) {
+		// TODO Auto-generated method stub
+		return inputLine;
 	}
 
 	private String getRank(String inputLine) {
