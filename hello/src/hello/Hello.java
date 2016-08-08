@@ -43,7 +43,7 @@ public class Hello extends JApplet{
 		}
 	}
 	
-	//If you want something to happer whenever 
+	//If you want something to happen whenever 
 	// a JTextField changes, add this listener:
 	class Modl implements DocumentListener{
 		public void changedUpdate(DocumentEvent e){
