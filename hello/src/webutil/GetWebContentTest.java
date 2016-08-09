@@ -16,17 +16,25 @@ public class GetWebContentTest {
 	 GetWebContent get1 = new GetWebContent();
 	 GetWebContent get2 = new GetWebContent("600005");
 	 GetWebContent get3= new GetWebContent("600660");
-	final static String FILE_NAME = "E:\\business\\stock\\stock_divident\\stock-code-list.txt";
-	final static String OUTPUT_FILE_NAME = "E:\\business\\stock\\stock_divident\\stock-dividend.txt";
-	final static Charset ENCODING = StandardCharsets.UTF_8;
+	 static String FILE_NAME;
+	 static String OUTPUT_FILE_NAME;
+	 static Charset ENCODING = StandardCharsets.UTF_8;
 
 	public static void main(String[] args)  throws IOException{
 		// TODO Auto-generated method stub
 		GetWebContentTest getWebContentTest = new GetWebContentTest();
 		
 		System.out.println("we are testing the GetWebContent class");
-<<<<<<< HEAD
+
+		//get the res folder path
+		String absolutePathOfRes = getWebContentTest.getClass().getProtectionDomain().getCodeSource().getLocation().getPath();
+		absolutePathOfRes = absolutePathOfRes.substring(1,absolutePathOfRes.lastIndexOf("/")); //bin:=>E:/zjh/java/repo/GitHub/git/hello/hello/bin
+		absolutePathOfRes = absolutePathOfRes.substring(0,absolutePathOfRes.lastIndexOf("/")); //project:=> E:/zjh/java/repo/GitHub/git/hello/hello/
+		FILE_NAME = absolutePathOfRes+"/res/stock-code-list.txt";
+		OUTPUT_FILE_NAME = absolutePathOfRes+"/res/stock-dividend.txt";
 		
+		System.out.println(FILE_NAME);
+		System.out.println(OUTPUT_FILE_NAME);
 		//find the cool info from web
 		
 		getWebContentTest.get1.findIt();
@@ -39,24 +47,11 @@ public class GetWebContentTest {
 		System.out.println(getWebContentTest.get3.getResult());
 		
 		//read and write file 
-//		getWebContentTest.readLargeTextFile(FILE_NAME);
-//		List<String> lines;
-//		lines = Arrays.asList("Down to the waterline", "Water Of Love");
-//		getWebContentTest.writeLargeTextFile(OUTPUT_FILE_NAME,lines);
-=======
-//		System.out.println(getWebContentTest.get1.getCode() );
-//		getWebContentTest.get1.findIt();
-//		System.out.println(getWebContentTest.get2.getCode() );
-//		getWebContentTest.get2.findIt();
-//		System.out.println(getWebContentTest.get3.getCode() );
-//		getWebContentTest.get3.findIt();
-		
 		getWebContentTest.readLargeTextFile(FILE_NAME);
 		List<String> lines;
 		lines = Arrays.asList("Down to the waterline", "Water Of Love");
 		getWebContentTest.writeLargeTextFile(OUTPUT_FILE_NAME,lines);
->>>>>>> branch 'master' of https://github.com/norstc/hellojava.git
-		
+
 		
 		
 	}
