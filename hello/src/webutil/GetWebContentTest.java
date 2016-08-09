@@ -25,7 +25,7 @@ public class GetWebContentTest {
 		GetWebContentTest getWebContentTest = new GetWebContentTest();
 		
 		System.out.println("we are testing the GetWebContent class");
-<<<<<<< HEAD
+
 		
 		//find the cool info from web
 		
@@ -43,7 +43,6 @@ public class GetWebContentTest {
 //		List<String> lines;
 //		lines = Arrays.asList("Down to the waterline", "Water Of Love");
 //		getWebContentTest.writeLargeTextFile(OUTPUT_FILE_NAME,lines);
-=======
 //		System.out.println(getWebContentTest.get1.getCode() );
 //		getWebContentTest.get1.findIt();
 //		System.out.println(getWebContentTest.get2.getCode() );
@@ -51,11 +50,11 @@ public class GetWebContentTest {
 //		System.out.println(getWebContentTest.get3.getCode() );
 //		getWebContentTest.get3.findIt();
 		
-		getWebContentTest.readLargeTextFile(FILE_NAME);
-		List<String> lines;
-		lines = Arrays.asList("Down to the waterline", "Water Of Love");
-		getWebContentTest.writeLargeTextFile(OUTPUT_FILE_NAME,lines);
->>>>>>> branch 'master' of https://github.com/norstc/hellojava.git
+//		getWebContentTest.readLargeTextFile(FILE_NAME);
+//		List<String> lines;
+//		lines = Arrays.asList("Down to the waterline", "Water Of Love");
+//		getWebContentTest.writeLargeTextFile(OUTPUT_FILE_NAME,lines);
+
 		
 		
 		
