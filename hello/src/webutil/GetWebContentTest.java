@@ -31,7 +31,7 @@ public class GetWebContentTest {
 		// TODO Auto-generated method stub
 		GetWebContentTest getWebContentTest = new GetWebContentTest();
 		
-		System.out.println("we are testing the GetWebContent class");
+		System.out.println("code name currentPrice dividend");
 
 		//get the res folder path
 		String absolutePathOfRes = getWebContentTest.getClass().getProtectionDomain().getCodeSource().getLocation().getPath();
