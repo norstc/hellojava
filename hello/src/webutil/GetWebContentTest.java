@@ -33,8 +33,8 @@ public class GetWebContentTest {
 		FILE_NAME = absolutePathOfRes+"/res/stock-code-list.txt";
 		OUTPUT_FILE_NAME = absolutePathOfRes+"/res/stock-dividend.txt";
 		
-		System.out.println(FILE_NAME);
-		System.out.println(OUTPUT_FILE_NAME);
+		//System.out.println(FILE_NAME);
+		//System.out.println(OUTPUT_FILE_NAME);
 		//find the cool info from web
 		
 		getWebContentTest.get1.findIt();
@@ -75,7 +75,7 @@ public class GetWebContentTest {
 		try (Scanner scanner = new Scanner(path, ENCODING.name())){
 			while (scanner.hasNextLine()){
 				//process each line
-				log(scanner.nextLine());
+				//log(scanner.nextLine());
 			}
 			
 		}
