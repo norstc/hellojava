@@ -113,7 +113,7 @@ public class GetWebContent {
 	 */
 	private String getStockClose(String inputLine) {
 		// TODO  <p id="stockclose" class="stock"><span id="stock_quoteinfo_xj" class="red">15.73</span><span class="img"></span></p>
-		String ret = "not found";
+		String ret = "---";
 		
 		ret = getPrice(inputLine);
 		
@@ -142,7 +142,7 @@ public class GetWebContent {
 	 */
 	private String getDivident(ArrayList<String> dividendLines) {
 		// TODO find the dividend from the dividend Lines
-		String ret = "not found" ;
+		String ret = "---" ;
 		String line;
 
 		for(int i = 0;i<dividendLines.size();i++){
