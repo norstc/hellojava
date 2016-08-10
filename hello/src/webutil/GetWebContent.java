@@ -44,7 +44,7 @@ public class GetWebContent {
 	
 	public String findIt(){
 		String dividendInfo = null; //the result will send back
-		dividendInfo =code + " "; // start with stock code 
+		dividendInfo =code + ": "; // start with stock code 
 		ArrayList<String> dividendLines = new ArrayList<String>();
 		boolean start= false;
 		boolean end = false;
@@ -130,7 +130,7 @@ public class GetWebContent {
 		// TODO <title>浦发银行(600000)_融资分红_证券之星</title>
 		int x = inputLine.indexOf("<title>");
 		int y = inputLine.indexOf("(");
-		String ret = inputLine.substring(x+7, y)+ "  "; //need 2 space, 1 space will be omitted
+		String ret = inputLine.substring(x+7, y)+ ": "; //need 2 space, 1 space will be omitted
 		return ret;
 		
 	}
@@ -142,7 +142,7 @@ public class GetWebContent {
 	 */
 	private String getDivident(ArrayList<String> dividendLines) {
 		// TODO find the dividend from the dividend Lines
-		String ret = "---" ;
+		String ret = "0" ;
 		String line;
 
 		for(int i = 0;i<dividendLines.size();i++){
@@ -166,7 +166,7 @@ public class GetWebContent {
 		Pattern patternPrice = Pattern.compile("\\d+\\.\\d+"); //价格匹配模式=>>15.73 
 		Matcher matcher = patternPrice.matcher(aLine);
 		if(matcher.find()){
-			price = matcher.group() + "  ";
+			price = matcher.group() + ": ";
 		}
 		
 		return price;

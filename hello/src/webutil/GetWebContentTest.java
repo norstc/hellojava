@@ -32,7 +32,7 @@ public class GetWebContentTest {
 		GetWebContentTest getWebContentTest = new GetWebContentTest();
 		
 
-		System.out.println("code name currentPrice dividend");
+		System.out.println("code:name:currentPrice:dividend");
 
 		//get the res folder path
 		String absolutePathOfRes = getWebContentTest.getClass().getProtectionDomain().getCodeSource().getLocation().getPath();
