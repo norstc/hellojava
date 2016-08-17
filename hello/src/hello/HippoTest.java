@@ -6,6 +6,7 @@ public class HippoTest {
 		// TODO Auto-generated method stub
 		System.out.println("Starting...");
 		Hippo aHippo = new Hippo();
+		Hippo tom = new Hippo("Tom");
 	}
 
 }

@@ -7,4 +7,9 @@ public class Hippo extends Animal{
 		System.out.println("Making a Hippo...");
 		
 	}
+	
+	public Hippo(String name){
+		super(name);
+		System.out.println("Making a named Hippo...");
+	}
 }
